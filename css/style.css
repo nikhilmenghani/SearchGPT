@@ -1,0 +1,20 @@
+body {
+    margin: 20px;
+    font-family: Arial, sans-serif; /* Add a default font */
+    color: #333; /* Set a default text color for better readability */
+    background-color: #f7f7f7; /* Set a light background for the whole page */
+}
+
+h4 {
+    font-family: sans-serif;
+    margin: 0;
+    color: #1a1a1a; /* Slightly darker color for headers */
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+

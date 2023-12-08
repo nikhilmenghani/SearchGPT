@@ -1,0 +1,155 @@
+/* Common styles for all messages */
+.message {
+    white-space: pre-wrap;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 4px; /* Rounded corners for message bubbles */
+    line-height: 1.5; /* Increase line height for better readability */
+    margin-bottom: 16px; /* Spacing between messages */
+    width: fit-content; /* Fit to content */
+    max-width: 80%; /* Maximum width to prevent overly wide messages */
+}
+
+.message pre {
+    background-color: #f5f5f5; /* Light gray background */
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 4px; /* Rounded corners */
+    padding: 10px; /* Padding inside the code block */
+    overflow-x: auto; /* Horizontal scrolling for long lines of code */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for code */
+    font-size: 0.9em; /* Slightly smaller font size */
+    line-height: 1.4; /* Adjust line height for readability */
+    color: #333; /* Darker color for code text */
+    margin-top: 5px; /* Margin at the top */
+    margin-bottom: 15px; /* Margin at the bottom */
+    width: 95%; /* Width of the code block */
+    max-width: 100%; /* Ensure it doesn't overflow its container */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Paragraph styling */
+.message p {
+    margin-top: 4px; /* Reduced top margin */
+    margin-bottom: 4px; /* Reduced bottom margin */
+    line-height: 1.4; /* Line height for readability */
+}
+
+/* Header styling */
+.message h1 {
+    font-size: 1.6em; /* Larger font size for h1 */
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-weight: bold;
+}
+
+.message h2 {
+    font-size: 1.4em; /* h2 size */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.message h3 {
+    font-size: 1.2em; /* h3 size */
+    margin-top: 8px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+/* For h4, h5, h6, adjust as needed */
+
+/* List styling */
+.message ul, .message ol {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-left: 20px; /* Indent for lists */
+}
+
+.message li {
+    margin-bottom: 2px; /* Space between list items */
+    line-height: 1.0; /* Line height for list items */
+}
+
+/* Blockquote styling */
+.message blockquote {
+    margin: 8px 0;
+    padding-left: 15px;
+    border-left: 3px solid #ccc; /* Border for blockquotes */
+    color: #555; /* Slightly lighter text color */
+    font-style: italic; /* Italic text for quotes */
+}
+
+/* Table styling */
+.message table {
+    border-collapse: collapse;
+    margin: 8px 0;
+    width: 100%; /* Full-width tables */
+}
+
+.message th, .message td {
+    border: 1px solid #ddd; /* Border for table cells */
+    padding: 4px 8px; /* Padding in cells */
+    text-align: left; /* Align text to left */
+}
+
+/* Ensure images are responsive */
+.message img {
+    max-width: 100%;
+    height: auto;
+    border: 0; /* Remove border from images */
+}
+
+/* HTML-specific styles */
+.language-html {
+    background-color: #fff0f0; /* Light red background for HTML */
+    border-left: 3px solid #e44d26; /* Deep orange border on the left */
+}
+
+/* JavaScript-specific styles */
+.language-javascript {
+    background-color: #f0f0ff; /* Light blue background for JavaScript */
+    border-left: 3px solid #f7df1e; /* Yellow border on the left */
+}
+
+/* CSS-specific styles */
+.language-css {
+    background-color: #f0fff0; /* Light green background for CSS */
+    border-left: 3px solid #2965f1; /* Blue border on the left */
+}
+
+/* Author message specific styles */
+.author-message {
+    background-color: #e7f3ff; /* Light blue background for author messages */
+    border: 1px solid #007bff; /* Border color similar to author name */
+    color: #333; /* Darker text color for readability */
+    align-self: flex-start; /* Align to the start (left) */
+}
+
+/* User message specific styles */
+.user-message {
+    background-color: #f1f1f1; /* Light grey background for user messages */
+    border: 1px solid #ccc; /* Grey border for user messages */
+    color: #555; /* Slightly lighter color for messages */
+    align-self: flex-end; /* Align to the end (right) */
+}
+
+/* Author name styling */
+.author {
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #007bff; /* Blue color for author name */
+    text-transform: uppercase; /* Uppercase for author's first letter */
+}
+
+/* Content container */
+#content {
+    float: left;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border-left: 1px solid #ddd;
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column; /* To use flex alignment */
+}
