@@ -26,7 +26,7 @@ window.onload = function () {
                 titleDiv.className = "conversation";
                 titleDiv.innerHTML = conversation.title;
                 titleDiv.onclick = function () {
-                    displayConversation(index);
+                    displayConversation(index);  // Ensure this works for both formats
                 };
                 nav.appendChild(titleDiv);
             }
@@ -45,12 +45,14 @@ window.onload = function () {
     // Event listener for search box
     document.getElementById("searchBox").addEventListener('keyup', displayFilteredTitles);
 
-
+    // Function to display conversation when clicked
     function displayConversation(index) {
         var conversation = jsonData[index];
-        var messages = getConversationMessages(conversation);
+        var messages = getConversationMessages(conversation);  // Handle both formats
+        var content = document.getElementById('content');  // Ensure content element is referenced
         content.innerHTML = ''; // Clear previous content
         content.className = "inside_conversation";
+        
         messages.forEach(msg => {
             var messageDiv = document.createElement("div");
             messageDiv.className = "message " + (msg.author === "ChatGPT" ? "author-message" : "user-message");
@@ -106,11 +108,12 @@ window.onload = function () {
         });
     }
 
+    // Function to get messages for both the new and original formats
     function getConversationMessages(conversation) {
         var messages = [];
 
         if (conversation.messages) {
-            // New format with "messages" array
+            // Handle new format where messages are in the "messages" array
             conversation.messages.forEach(message => {
                 let text = message.content.join(" ").trim(); // Join the content array
                 let author = message.author;
@@ -122,7 +125,7 @@ window.onload = function () {
                 messages.push({ author, text });
             });
         } else if (conversation.mapping) {
-            // Original format with "mapping" structure
+            // Handle original format with "mapping" structure
             var currentNode = conversation.current_node;
             while (currentNode != null) {
                 var node = conversation.mapping[currentNode];
